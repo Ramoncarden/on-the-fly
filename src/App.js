@@ -1,11 +1,33 @@
 import './tailwind.output.css';
 import './App.css';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Title from './components/Title';
+import CardContent from './components/CardContent';
+import SecondaryTitle from './components/SecondaryTitle';
+import Footer from './components/Footer';
+import Form from './components/auth/Form';
+import SignIn from './components/auth/SignIn';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="border-2 border-gray-300 p-2">Yo</h1>
-    </div>
+    <BrowserRouter>
+      <main className="h-screen">
+        <Navbar />
+        <Route exact path="/">
+          <Title />
+          <SecondaryTitle />
+          <CardContent />
+        </Route>
+        <Route path="/signup">
+          <Form />
+        </Route>
+        <Route exact path="/signin">
+          <SignIn />
+        </Route>
+        <Footer />
+      </main>
+    </BrowserRouter>
   );
 }
 

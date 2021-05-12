@@ -4224,6 +4224,18 @@ video {
   background-image: linear-gradient(to top left, var(--tw-gradient-stops));
 }
 
+.bg-kitchen-img {
+  background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/131.jpg');
+}
+
+.bg-kitchen-orange {
+  background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-orange-228.jpeg');
+}
+
+.bg-kitchen-utensils {
+  background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
+}
+
 .from-transparent {
   --tw-gradient-from: transparent;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -11228,6 +11240,14 @@ video {
 
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-courgette {
+  font-family: "Courgette", cursive;
+}
+
+.font-ptSans {
+  font-family: "PT Sans", sans-serif;
 }
 
 .font-thin {
@@ -33465,6 +33485,18 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .sm\:bg-kitchen-img {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/131.jpg');
+  }
+
+  .sm\:bg-kitchen-orange {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-orange-228.jpeg');
+  }
+
+  .sm\:bg-kitchen-utensils {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
+  }
+
   .sm\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -40469,6 +40501,14 @@ video {
 
   .sm\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .sm\:font-courgette {
+    font-family: "Courgette", cursive;
+  }
+
+  .sm\:font-ptSans {
+    font-family: "PT Sans", sans-serif;
   }
 
   .sm\:font-thin {
@@ -62571,6 +62611,18 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .md\:bg-kitchen-img {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/131.jpg');
+  }
+
+  .md\:bg-kitchen-orange {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-orange-228.jpeg');
+  }
+
+  .md\:bg-kitchen-utensils {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
+  }
+
   .md\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -69575,6 +69627,14 @@ video {
 
   .md\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .md\:font-courgette {
+    font-family: "Courgette", cursive;
+  }
+
+  .md\:font-ptSans {
+    font-family: "PT Sans", sans-serif;
   }
 
   .md\:font-thin {
@@ -91677,6 +91737,18 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .lg\:bg-kitchen-img {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/131.jpg');
+  }
+
+  .lg\:bg-kitchen-orange {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-orange-228.jpeg');
+  }
+
+  .lg\:bg-kitchen-utensils {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
+  }
+
   .lg\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -98681,6 +98753,14 @@ video {
 
   .lg\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .lg\:font-courgette {
+    font-family: "Courgette", cursive;
+  }
+
+  .lg\:font-ptSans {
+    font-family: "PT Sans", sans-serif;
   }
 
   .lg\:font-thin {
@@ -120783,6 +120863,18 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .xl\:bg-kitchen-img {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/131.jpg');
+  }
+
+  .xl\:bg-kitchen-orange {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-orange-228.jpeg');
+  }
+
+  .xl\:bg-kitchen-utensils {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
+  }
+
   .xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -127787,6 +127879,14 @@ video {
 
   .xl\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .xl\:font-courgette {
+    font-family: "Courgette", cursive;
+  }
+
+  .xl\:font-ptSans {
+    font-family: "PT Sans", sans-serif;
   }
 
   .xl\:font-thin {
@@ -149889,6 +149989,18 @@ video {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
   }
 
+  .\32xl\:bg-kitchen-img {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/131.jpg');
+  }
+
+  .\32xl\:bg-kitchen-orange {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-orange-228.jpeg');
+  }
+
+  .\32xl\:bg-kitchen-utensils {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
+  }
+
   .\32xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -156893,6 +157005,14 @@ video {
 
   .\32xl\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .\32xl\:font-courgette {
+    font-family: "Courgette", cursive;
+  }
+
+  .\32xl\:font-ptSans {
+    font-family: "PT Sans", sans-serif;
   }
 
   .\32xl\:font-thin {
