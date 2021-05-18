@@ -9,6 +9,7 @@ import SignIn from './components/auth/SignIn';
 import Home from './pages';
 import About from './pages/About';
 import Dropdown from './components/Dropdown';
+import ProfilePage from './components/dashboard/ProfilePage';
 
 function App() {
   const [ isOpen, setIsOpen ] = useState(false);
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route exact path="/signin">
             <SignIn />
+          </Route>
+          <Route exact path="/home">
+            <ProfilePage />
           </Route>
           <Footer />
         </main>
