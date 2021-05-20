@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProfilePage = () => {
   return (
@@ -8,12 +9,14 @@ const ProfilePage = () => {
         type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-      <div class="w-full bg-indigo-100 h-screen flex flex-row flex-wrap justify-center ">
+      <div class="w-full bg-green-50 h-screen flex flex-row flex-wrap justify-center ">
         <div class="bg-white shadow-lg border-t-4 border-indigo-500 absolute bottom-0 w-full md:w-0 md:hidden flex flex-row flex-wrap">
           <div class="w-full text-right">
             <button class="p-2 fa fa-bars text-4xl text-gray-600">press me</button>
           </div>
         </div>
+
+        {/* Profile container */}
         <div class="w-0 md:w-1/4 lg:w-1/5 h-0 md:h-screen overflow-y-hidden bg-white shadow-lg">
           <div class="p-5 bg-white sticky top-0">
             <img
@@ -41,6 +44,14 @@ const ProfilePage = () => {
             >
               <i class="fa fa-arrow-left text-gray-600 text-2xl pr-1 pt-1 float-right" />Log out
             </a>
+
+            <Link
+              to="/recipes/new"
+              class="hover:bg-gray-300 bg-gray-200 border-t-2 border-gray-300 p-3 w-full text-xl text-left text-gray-600 font-semibold"
+              href=""
+            >
+              <i class="fa fa-plus text-gray-600 text-2xl pr-1 pt-1 float-right" />Submit new recipe
+            </Link>
           </div>
         </div>
 

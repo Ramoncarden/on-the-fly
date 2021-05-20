@@ -10,6 +10,8 @@ import Home from './pages';
 import About from './pages/About';
 import Dropdown from './components/Dropdown';
 import ProfilePage from './components/dashboard/ProfilePage';
+import NewRecipe from './components/Recipes/RecipeForm';
+import RecipeForm from './components/Recipes/RecipeForm';
 
 function App() {
   const [ isOpen, setIsOpen ] = useState(false);
@@ -49,6 +51,9 @@ function App() {
           </Route>
           <Route exact path="/home">
             <ProfilePage />
+          </Route>
+          <Route exact path="/recipes/new">
+            <RecipeForm />
           </Route>
           <Footer />
         </main>

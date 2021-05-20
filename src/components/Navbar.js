@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ toggle }) => {
   return (
     <nav
-      className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono bg-purple-100"
+      className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm font-mono bg-green-100"
       role="navigation"
     >
       <Link to="/" className="pl-8 font-courgette text-2xl">

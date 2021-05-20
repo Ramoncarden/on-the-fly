@@ -4236,6 +4236,10 @@ video {
   background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
 }
 
+.bg-form-background {
+  background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg');
+}
+
 .from-transparent {
   --tw-gradient-from: transparent;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -33497,6 +33501,10 @@ video {
     background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
   }
 
+  .sm\:bg-form-background {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg');
+  }
+
   .sm\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -62621,6 +62629,10 @@ video {
 
   .md\:bg-kitchen-utensils {
     background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
+  }
+
+  .md\:bg-form-background {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg');
   }
 
   .md\:from-transparent {
@@ -91749,6 +91761,10 @@ video {
     background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
   }
 
+  .lg\:bg-form-background {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg');
+  }
+
   .lg\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -120875,6 +120891,10 @@ video {
     background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
   }
 
+  .xl\:bg-form-background {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg');
+  }
+
   .xl\:from-transparent {
     --tw-gradient-from: transparent;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 0, 0, 0));
@@ -149999,6 +150019,10 @@ video {
 
   .\32xl\:bg-kitchen-utensils {
     background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/kitchen-utensils.png');
+  }
+
+  .\32xl\:bg-form-background {
+    background-image: url('/Users/ramoncardenas/SpringBoard_2/on-the-fly/src/modern-kitchen-interior-background-template-cartoon-dinner-room-with-furniture/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg');
   }
 
   .\32xl\:from-transparent {
