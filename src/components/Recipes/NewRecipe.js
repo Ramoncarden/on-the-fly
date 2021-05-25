@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import useForm from '../../hooks/useForm';
 import validate from '../auth/validateInfo';
 
@@ -9,72 +9,120 @@ const classes = {
 const NewRecipe = ({ submitForm }) => {
   const { handleChange, values, handleSubmit, errors } = useForm(submitForm, validate);
 
+  function createNewInput() {
+    let inputBox = document.createElement('div');
+
+    inputBox.innerHTML = `<input type='text' className='form-input' placeholder='Add ingredient' onChange={handleChange} name='ingredients'/>`;
+
+    document.getElementById('input-container').appendChild(inputBox);
+  }
+
+  function removeInput() {
+    let inputContainer = document.getElementById('input-container');
+
+    if (inputContainer.childElementCount > 0) {
+      inputContainer.removeChild(inputContainer.lastChild);
+    }
+  }
+
   return (
     <div className=" flex flex-col">
       <form action="" className="form border-2" onSubmit={handleSubmit}>
-        <h1>Get started with us today! Create your account by filling out the information below</h1>
+        <h1 className="text-green-400">Fill out the information below to submit a new recipe.</h1>
         <div className="form-inputs">
-          <label htmlFor="username" className="form-label">
-            Username
+          <label htmlFor="recipe-name" className="form-label">
+            Recipe Name
           </label>
           <input
-            id="username"
+            id="recipe-name"
             type="text"
-            name="username"
+            name="recipe-name"
             className="form-input"
-            placeholder="username"
-            value={values.username}
+            placeholder="name"
+            value={values.recipe}
             onChange={handleChange}
           />
           {errors.username && <p className={classes.error}>{errors.username}</p>}
         </div>
 
         <div className="form-inputs">
-          <label htmlFor="email" className="form-label">
-            Email
+          <label htmlFor="serves" className="form-label">
+            Serves
           </label>
-          <input
-            id="email"
-            type="email"
-            name="email"
+          <select
+            id="serves"
+            type="number"
+            name="serves"
             className="form-input"
-            placeholder="email"
-            value={values.email}
+            placeholder="serves"
+            value={values.serves}
             onChange={handleChange}
-          />
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6+">6+</option>
+          </select>
           {errors.email && <p className={classes.error}>{errors.email}</p>}
         </div>
 
         <div className="form-inputs">
-          <label htmlFor="password" className="form-label">
-            Password
+          <label htmlFor="preparation" className="form-label">
+            Preparation Time
           </label>
           <input
-            id="password"
-            type="password"
-            name="password"
+            id="preparation"
+            type="text"
+            name="preparation"
             className="form-input"
-            placeholder="password"
-            value={values.password}
+            placeholder="Preparation Time"
+            value={values.preparation}
             onChange={handleChange}
           />
           {errors.password && <p className={classes.error}>{errors.password}</p>}
         </div>
 
         <div className="form-inputs">
-          <label htmlFor="password2" className="form-label">
-            Confirm your password
+          <label htmlFor="ingredients" className="form-label">
+            Add ingredients
           </label>
+          <div>
+            {/* Add Button */}
+            <input type="button" value="Add ingredient" сlassName="form-input-btn" onClick={createNewInput} />
+            {/* Delete input button */}
+            <input type="button" value="Remove ingredient" сlassName="form-input-btn" onClick={removeInput} />
+          </div>
+
           <input
-            id="password2"
-            type="password"
-            name="password2"
+            id="ingredients"
+            type="text"
+            name="ingredients"
             className="form-input"
-            placeholder="password"
-            value={values.password2}
+            placeholder="Add ingredient"
+            value={values.ingredients}
             onChange={handleChange}
           />
-          {errors.password2 && <p className={classes.error}>{errors.password2}</p>}
+          <div id="input-container" />
+        </div>
+
+        <div className="form-inputs">
+          <label htmlFor="instructions" className="form-label">
+            Preparation instructions
+          </label>
+          <textarea
+            id="instructions"
+            type="textarea"
+            name="instructions"
+            className="block"
+            placeholder="List preparation instructions"
+            value={values.instructions}
+            onChange={handleChange}
+            rows="8"
+            cols="70"
+          />
+          {errors.username && <p className={classes.error}>{errors.username}</p>}
         </div>
 
         <button className="form-input-btn" type="submit">
