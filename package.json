@@ -45,5 +45,17 @@
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.1.2"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramoncarden/on-the-fly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ramoncarden/on-the-fly/issues"
+  },
+  "homepage": "https://github.com/Ramoncarden/on-the-fly#readme"
 }

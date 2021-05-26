@@ -6,6 +6,15 @@ const classes = {
   error: 'text-red-400'
 };
 
+/**  
+ * Signup Form
+ * On submission:
+ * -calls signup function prop
+ * -redirects to /home route
+ * 
+ * Routes -> SignupForm
+*/
+
 const Signup = ({ submitForm }) => {
   const { handleChange, values, handleSubmit, errors } = useForm(submitForm, validate);
 
