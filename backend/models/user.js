@@ -106,6 +106,8 @@ class User {
    * Throws NotFoundError if user not found.
   */
 
+  //TODO adjust get user for homepage
+
   static async get(username) {
     const userRes = await db.query(
       `SELECT username,
