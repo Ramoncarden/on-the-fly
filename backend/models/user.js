@@ -6,7 +6,7 @@ const { sqlForPartialUpdate } = require('../helpers/sql');
 const { NotFoundError, BadRequestError, UnauthorizedError } = require('../expressError');
 
 const { BCRYPT_WORK_FACTOR } = require('../config.js');
-const { password } = require('../db');
+// const { password } = require('../db');
 
 /** Related function for users */
 
@@ -33,6 +33,7 @@ class User {
     const user = result.rows[0];
 
     if (user) {
+      // compare hashed password to a new hash from password
       const isValid = await bcrypt.compare(password, user.password);
       if (isValid === true) {
         delete user.password;
@@ -43,9 +44,16 @@ class User {
     throw new UnauthorizedError('Invalid username/password');
   }
 
+  /** Register user with data.
+   * 
+   * Returns {username, firstName, lastName, email, isAdmin}
+   * 
+   *Throws BadRequestError on duplicates 
+   */
+
   static async register({ username, password, email, isAdmin }) {
     const duplicateCheck = await db.query(
-      `SELECT username,
+      `SELECT username
          FROM users
          WHERE username = $1`,
       [ username ]

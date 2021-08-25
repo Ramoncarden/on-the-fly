@@ -1,6 +1,8 @@
-import React from 'react';
-import useForm from '../../hooks/useForm';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+// import useForm from '../../hooks/useForm';
 import validate from './validateInfo';
+import Alert from './common/Alert';
 
 const classes = {
   error: 'text-red-400'
@@ -15,8 +17,42 @@ const classes = {
  * Routes -> SignupForm
 */
 
-const Signup = ({ submitForm }) => {
-  const { handleChange, values, handleSubmit, errors } = useForm(submitForm, validate);
+const SignupForm = ({ signup }) => {
+  // const { handleChange, values, errors } = useForm(validate);
+  const history = useHistory();
+  const [ formData, setFormData ] = useState({
+    username: '',
+    email: '',
+    password: '',
+    password2: ''
+  });
+
+  const [ formErrors, setFormErrors ] = useState([]);
+
+  console.debug('SignupForm', 'signup=', typeof signup, 'formData=', formData, 'formErrors', formErrors);
+
+  /**
+   * Handle form submit
+   * 
+   * Calls login func prop and, if successfull, redirects to /home.
+   * 
+   */
+  async function handleSubmit(evt) {
+    evt.preventDefault();
+    let result = await signup(formData);
+    if (result.success) {
+      history.push('/home');
+    } else {
+      setFormErrors(result.errors);
+    }
+  }
+
+  function handleChange(evt) {
+    const { name, value } = evt.target;
+    setFormData((data) => ({ ...data, [name]: value }));
+  }
+
+  // TODO: save api response, save in local storage
 
   return (
     <div className="form-content-right">
@@ -32,10 +68,10 @@ const Signup = ({ submitForm }) => {
             name="username"
             className="form-input"
             placeholder="username"
-            value={values.username}
+            value={formData.username}
             onChange={handleChange}
           />
-          {errors.username && <p className={classes.error}>{errors.username}</p>}
+          {/* {errors.username && <p className={classes.error}>{errors.username}</p>} */}
         </div>
 
         <div className="form-inputs">
@@ -48,10 +84,10 @@ const Signup = ({ submitForm }) => {
             name="email"
             className="form-input"
             placeholder="email"
-            value={values.email}
+            value={formData.email}
             onChange={handleChange}
           />
-          {errors.email && <p className={classes.error}>{errors.email}</p>}
+          {/* {errors.email && <p className={classes.error}>{errors.email}</p>} */}
         </div>
 
         <div className="form-inputs">
@@ -64,10 +100,10 @@ const Signup = ({ submitForm }) => {
             name="password"
             className="form-input"
             placeholder="password"
-            value={values.password}
+            value={formData.password}
             onChange={handleChange}
           />
-          {errors.password && <p className={classes.error}>{errors.password}</p>}
+          {/* {errors.password && <p className={classes.error}>{errors.password}</p>} */}
         </div>
 
         <div className="form-inputs">
@@ -80,11 +116,12 @@ const Signup = ({ submitForm }) => {
             name="password2"
             className="form-input"
             placeholder="password"
-            value={values.password2}
+            value={formData.password2}
             onChange={handleChange}
           />
-          {errors.password2 && <p className={classes.error}>{errors.password2}</p>}
+          {/* {errors.password2 0-&& <p className={classes.error}>{errors.password2}</p>} */}
         </div>
+        {formErrors.length ? <Alert type="danger" messages={formErrors} /> : null}
 
         <button className="form-input-btn" type="submit">
           Submit
@@ -99,4 +136,4 @@ const Signup = ({ submitForm }) => {
   );
 };
 
-export default Signup;
+export default SignupForm;

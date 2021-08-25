@@ -96,4 +96,6 @@ router.delete('/:username', ensureCorrectUserOrAdmin, async function(req, res, n
   }
 });
 
+module.exports = router;
+
 // TODO: Add post for new recipe route here
