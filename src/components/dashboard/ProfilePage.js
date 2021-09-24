@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import UserContext from '../auth/UserContext';
 
 const ProfilePage = () => {
+  const { currentUser } = useContext(UserContext);
+  console.debug('ProfilePage', 'currentUser=', currentUser);
+
   return (
     <div class="w-full flex flex-row flex-wrap">
       <link
@@ -23,7 +27,7 @@ const ProfilePage = () => {
               class="border border-indigo-100 shadow-lg round"
               src="http://lilithaengineering.co.za/wp-content/uploads/2017/08/person-placeholder.jpg"
             />
-            <div class="pt-2 border-t mt-5 w-full text-center text-xl text-gray-600">Some Person</div>
+            <div class="pt-2 border-t mt-5 w-full text-center text-xl text-gray-600">{currentUser.username}</div>
           </div>
           <div class="w-full h-screen antialiased flex flex-col hover:cursor-pointer">
             <a

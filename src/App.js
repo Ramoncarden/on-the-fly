@@ -4,6 +4,7 @@ import './tailwind.output.css';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import LoadingSpinner from './components/auth/common/LoadingSpinner';
 import Form from './components/auth/Form';
 import SignIn from './components/auth/SignIn';
 import Home from './pages/index';
@@ -16,6 +17,7 @@ import useLocalStorage from './hooks/useLocalStorage';
 import OnTheFlyApi from './api/api';
 import UserContext from './components/auth/UserContext';
 import jwt from 'jsonwebtoken';
+import PrivateRoutes from './routes-nav/PrivateRoutes';
 
 // key name for storing token in localStorage from remember me re-login
 export const TOKEN_STORAGE_ID = 'on-the-fly-token';
@@ -55,7 +57,7 @@ function App() {
         if (token) {
           try {
             let { username } = jwt.decode(token);
-            // put the token on the API class so it can use the API
+            // put the token on the API class so it can use it to call the API
             OnTheFlyApi.token = token;
             let currentUser = await OnTheFlyApi.getCurrentUser(username);
             setCurrentUser(currentUser);
@@ -131,6 +133,8 @@ function App() {
     };
   });
 
+  if (!infoLoaded) return <LoadingSpinner />;
+
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
@@ -148,9 +152,9 @@ function App() {
             <Route exact path="/signin">
               <SignIn />
             </Route>
-            <Route exact path="/home">
+            <PrivateRoutes exact path="/home">
               <ProfilePage />
-            </Route>
+            </PrivateRoutes>
             <Route exact path="/recipes/new">
               <RecipeForm />
             </Route>
